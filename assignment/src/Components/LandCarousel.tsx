@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useLandApi } from "../hooks/LandApi.ts";
 import { Card, CardBody, Carousel } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner, faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 const LandCarousel = (props: any): JSX.Element => {
   const [details, setDetails] = useState([]);
-  const [isLoading, setIsLoading] = useState(true); // Add loading state
+  const [isLoading, setIsLoading] = useState(true); 
 
   useEffect(() => {
     const apiUrl = "https://prod-be.1acre.in/lands/?ordering=-updated_at";
@@ -26,10 +25,6 @@ const LandCarousel = (props: any): JSX.Element => {
 
     fetchData();
   }, []);
-
-  useEffect(() => {
-    console.log("response is", details);
-  }, [details]);
 
   const mid = Math.ceil(details.length / 2);
   const leftColumnDetails = details.slice(0, mid);
