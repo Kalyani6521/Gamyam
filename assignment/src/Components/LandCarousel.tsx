@@ -136,7 +136,7 @@ const LandCarousel = (props: any): JSX.Element => {
                   <div className="text-black text-[14px] font-bold inline-flex">
                     {item?.total_land_size_in_acres.acres} Acres{" "}
                     {item?.total_land_size_in_acres.guntas} Guntas
-                    <div className="text-black text-[14px]">
+                    <div className="text-black text-[14px] font-normal">
                     <span className="font-bold">.</span> ₹
                     {item.price_per_acre_crore.crore}.
                     {item.price_per_acre_crore.lakh} crores per acre
